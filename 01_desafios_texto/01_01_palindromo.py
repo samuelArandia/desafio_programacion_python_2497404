@@ -1,9 +1,14 @@
-def es_palindromo(texto):
+# Identificar un palindromo 
 
-    texto_minuscula = texto.lower()
-    texto_sin_espacios = texto_minuscula.replace(" ", "")
-    return texto_sin_espacios == texto_sin_espacios[::-1]
+def palindromo(text):
+    text = text.replace(" ", "")
+    text = text.lower()
+    
+    if str(text) == "".join(reversed(text)):
+        print("Es palindromo")
+    else:
+        print("No es palindromo")
+        
+palindromo("Anita lava la tina")
+palindromo("palindromo")
 
-
-print(es_palindromo("Anita lava la tina"))  # True
-print(es_palindromo("palindromo"))  # False
