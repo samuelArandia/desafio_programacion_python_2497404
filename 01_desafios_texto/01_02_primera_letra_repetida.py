@@ -1,17 +1,17 @@
-def primera_letra_repetida(texto):
+# Encontrar la primera letra que se repite en un texto
 
-    texto_minsucula = texto.lower()
-    texto_sin_espacios = texto_minsucula.replace(" ", "")
-    lista_letras = []
-    for letra in texto_sin_espacios:
+def primera_letra_repetida(text):
+    text_sin_espacios = text.replace(" ", "")
+    text_minusculas = text.lower()
+    
+    lista_letras =[]
+    for letra in text_minusculas:
         if letra in lista_letras:
-            return letra
+            return print("La primera letra que se repite es: ", letra)
         else:
             lista_letras.append(letra)
-
+    
+    
     return None
-
-
-
-print(primera_letra_repetida("saltar"))  # a
-print(primera_letra_repetida("me gusta"))   # None
+    
+primera_letra_repetida("hola mundo")
